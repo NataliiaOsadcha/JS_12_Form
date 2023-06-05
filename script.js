@@ -4,19 +4,17 @@ const submitButton = document.querySelector('.submit');
 const currentForm = document.querySelector('.current');
 const error = document.querySelector('.error');
 
-let user_name = document.forms["form"]["user_name"].value;
-let postNP = document.forms["form"]["post"].value;
-let quantity = document.forms["form"]["quantity"].value;
-
 payButton.addEventListener('click', (event) => {
   payButton.classList.remove('show');
   form.classList.add('show');
 })
 
 function validateForm() {
+  let x = document.forms["form"]["user_name"].value;
+  let y = document.forms["form"]["post"].value;
+  let z = document.forms["form"]["quantity"].value;
 
-
-  if (user_name.length === 0 || postNP.length === 0 || quantity.length === 0) {
+  if (x.length === 0 || y.length === 0 || z.length === 0) {
     error.classList.add('show');
     return false;
   }
@@ -40,6 +38,8 @@ form.addEventListener('submit', (event) =>{
   return formObject;
 })
 
+let quantity = formObject.quantity;
+let postNP = formObject.post;
 
 
 submitButton.addEventListener('click', (event) =>{
@@ -47,11 +47,11 @@ submitButton.addEventListener('click', (event) =>{
 })  
  
 let total = document.createElement('p');
-total.innerHTML = `${quantity}`;
+total.innerHTML = quantity;
 list_01.appendChild(total);
 
 let post = document.createElement('p');
-post.innerHTML = `${postNP}`;
+post.innerHTML = postNP;
 list_02.appendChild(post);
 
 
