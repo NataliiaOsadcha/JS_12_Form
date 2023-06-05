@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 12 Form</title>
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="img">
+                <img src="./311158214.webp" alt="content image" width="200" height="200">
+            </div>
+            <button class="button show">купити</button>
+    
+            <form class="form" name="form" id="form" onsubmit="return validateForm()">
+                <label>ПІБ:
+                    <input type="text" name="user_name">
+                </label>
+                <label>Місто:
+                    <select name="select_city">
+                        <option value="value1" selected>Київ</option>
+                        <option value="value2">Одеса</option>
+                        <option value="value3">Львів</option>
+                      </select>
+                </label>
+                <label>Склад НП:
+                    <input type="text" name="post">
+                </label>
+                <p>Оплата</p>
+                <div class="payment">
+                    <label>Оплата банківською карткою
+                        <input type="radio" name="payment" value="card">
+                    </label>
+                    <label>Оплата після отримання товару 
+                        <input type="radio" name="payment" value="postpaid">
+                    </label>
+                </div>
+                <label>Кількість:
+                    <input type="number" name="quantity">
+                </label>
+                <label>Коментар:
+                    <textarea name="comment"
+                    rows="2" cols="33"></textarea>
+                </label>
+                <span class="error">Будь ласка заповніть всі обов'язкові поля</span>
+                <input class="submit" type="submit" value="замовлення підтверджую">
+            </form>
+            <div class="current">
+                <p>Ви замовили:</p>
+                <div id="list_01">
+                    <p>Кількість:</p>
+                </div>
+                <div id="list_02">
+                    <p>Склад НП:</p>
+                </div>
+
+            </div>
+
+
+        </div>
+        
+    </div>
+    <script src="script.js"> </script>
+</body>
+</html>

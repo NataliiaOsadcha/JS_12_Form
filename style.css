@@ -1,0 +1,104 @@
+@import url(reset.css);
+
+body {
+    box-sizing: border-box;
+    /* position: relative; */
+}
+.container {
+    width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 1px solid grey;
+    position: relative;
+
+}
+
+.box {
+    display: flex;
+    justify-content: start;
+    gap: 40px;
+}
+
+.form {
+    display: none;
+    border: 1px solid grey;
+    padding: 5px;
+}
+
+.form > label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+label > input {
+}
+
+
+.button {
+    display: none;
+    padding: 0px 20px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    background-color: lightgrey;
+}
+
+.payment {
+    padding: 10px;
+
+}
+
+.payment > label {
+    display: block;
+}
+
+textarea {
+    resize: none;
+
+}
+
+.submit {
+    padding: 0px 20px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    background-color: lightgrey;
+}
+
+.error {
+    display: none;
+    margin: 10px 0;
+    color: red;
+}
+
+.current {
+    display: none;
+    position: absolute;
+    top: 60%;
+    left: 10%;
+}
+
+.current > div {
+    margin-top: 20px;
+}
+
+
+.show{
+    display: block;
+}
+
+.disable {
+    display: none
+}
+
+.button:hover, .submit:hover {
+    background-color: teal;
+    color: white;
+}
+.button:active, .submit:active {
+    box-shadow: 0px 0px 5px teal;
+}
+
+
