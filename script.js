@@ -38,20 +38,23 @@ form.addEventListener('submit', (event) =>{
   return formObject;
 })
 
-const quantity = document.querySelector('#quantity');
-const postNP = document.querySelector('#post');
-
-
 submitButton.addEventListener('click', (event) =>{
   currentForm.classList.add('show');
 })  
- 
-const total = document.createElement('p');
-total.innerHTML = quantity;
+
+const quantity = document.querySelector('#quantity');
+const quantityValue = quantity.value;
+const postNP = document.querySelector('#post');
+const postNPValue = postNP.value;
+
+
+
+let total = document.createElement('p');
+total.innerHTML = quantityValue;
 list_01.appendChild(total);
 
-const post = document.createElement('p');
-post.innerHTML = postNP;
+let post = document.createElement('p');
+post.innerHTML = postNPValue;
 list_02.appendChild(post);
 
 
