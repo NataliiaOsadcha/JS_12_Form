@@ -38,19 +38,19 @@ form.addEventListener('submit', (event) =>{
   return formObject;
 })
 
-let quantity = formObject.quantity;
-let postNP = formObject.post;
+const quantity = document.querySelector('#quantity');
+const postNP = document.querySelector('#post');
 
 
 submitButton.addEventListener('click', (event) =>{
   currentForm.classList.add('show');
 })  
  
-let total = document.createElement('p');
+const total = document.createElement('p');
 total.innerHTML = quantity;
 list_01.appendChild(total);
 
-let post = document.createElement('p');
+const post = document.createElement('p');
 post.innerHTML = postNP;
 list_02.appendChild(post);
 
