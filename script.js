@@ -16,46 +16,28 @@ function validateForm() {
 
   if (x.length === 0 || y.length === 0 || z.length === 0) {
     error.classList.add('show');
-    return false;
+  } if (x.length > 0 && y.length > 0 && z.length > 0) {
+    error.classList.remove('show');
   }
 }
-
-form.addEventListener('submit', (event) =>{
-  event.preventDefault();
-  console.log('done')
-
-  const formValues = new FormData(form);
-  const formObject = {};
-
-  for( const value of formValues) {
-    if(!formObject[value[0]]) {
-      formObject[value[0]] = value[1]
-    } else {
-      formObject[value[0]] = `${formObject[value[0]]}, ${value[1]}`;
-    }
-  }
-  console.log(formObject)
-  return formObject;
-})
 
 submitButton.addEventListener('click', (event) =>{
   currentForm.classList.add('show');
 })  
 
-const quantity = document.querySelector('#quantity');
-const quantityValue = quantity.value;
-const postNP = document.querySelector('#post');
-const postNPValue = postNP.value;
+form.addEventListener('submit', (event) =>{
+  event.preventDefault();
 
+  const quantity = document.querySelector('#quantity');
+  const quantityValue = quantity.value;
+  const postNP = document.querySelector('#post');
+  const postNPValue = postNP.value;
 
+  let total = document.createElement('p');
+  total.innerHTML = quantityValue;
+  list_01.appendChild(total);
 
-let total = document.createElement('p');
-total.innerHTML = quantityValue;
-list_01.appendChild(total);
-
-let post = document.createElement('p');
-post.innerHTML = postNPValue;
-list_02.appendChild(post);
-
-
-
+  let post = document.createElement('p');
+  post.innerHTML = postNPValue;
+  list_02.appendChild(post);
+});
